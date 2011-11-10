@@ -2,9 +2,19 @@
 <html>
 <head>
   <title>Ruby on Rails TUtorial Sample App | <%= @title %></title>
+  <%= stylesheet_link_tag    'blueprint/screen', :media => 'screen' %>
+  <%= stylesheet_link_tag    'blueprint/print', :media => 'print' %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container">
+		<div class="nav">
+			<%= link_to "Home", '#'%>
+			<%= link_to "Help", '#'%>
+			<%= link_to "Sign in", '#'%>
+		</div>
+	</div>
 
 <%= yield %>
 
